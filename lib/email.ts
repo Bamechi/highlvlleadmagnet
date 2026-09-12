@@ -1,8 +1,6 @@
 import { Resend } from "resend";
 import { BRAND } from "./constants";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 interface Result { name: string; description: string; url: string; contact?: string; }
 
 interface Args { email: string; topic: string; results: Result[]; via: "paid" | "promo"; }
@@ -12,6 +10,7 @@ export async function sendResultsEmail({ email, topic, results, via }: Args) {
     console.error("RESEND_API_KEY not set — cannot email results.");
     return;
   }
+  const resend = new Resend(process.env.RESEND_API_KEY);
 
   const rows = results.map((r) => `<tr><td style="padding:12px 0;border-bottom:1px solid #d6e3f7;">
     <div style="font-weight:700;color:#0a1628;">${esc(r.name)}</div>

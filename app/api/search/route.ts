@@ -7,7 +7,10 @@ import { isCeilingReached, recordSpend } from "@/lib/costCeiling";
 import { logSubmission } from "@/lib/sheetLogger";
 import { sendResultsEmail } from "@/lib/email";
 
-const anthropic = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
+function getAnthropic() {
+  if (!process.env.ANTHROPIC_API_KEY) return null;
+  return new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
+}
 
 interface SearchRequestBody {
   topic: string;
@@ -57,6 +60,11 @@ export async function POST(req: NextRequest) {
   ]
     .filter(Boolean)
     .join(". ");
+
+  const anthropic = getAnthropic();
+  if (!anthropic) {
+    return NextResponse.json({ error: "Search engine not configured yet." }, { status: 500 });
+  }
 
   try {
     const message = await anthropic.messages.create({

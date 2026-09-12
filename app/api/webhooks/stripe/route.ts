@@ -3,11 +3,14 @@ import Stripe from "stripe";
 import { updateTierStatus } from "@/lib/sheetLogger";
 import { STRIPE_PAYMENT_LINKS } from "@/lib/constants";
 
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!);
-
 // Stripe requires the RAW request body for signature verification —
 // do not call req.json() before this, it will invalidate the signature.
 export async function POST(req: NextRequest) {
+  if (!process.env.STRIPE_SECRET_KEY || !process.env.STRIPE_WEBHOOK_SECRET) {
+    return NextResponse.json({ error: "Stripe not configured yet." }, { status: 500 });
+  }
+  const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
+
   const body = await req.text();
   const signature = req.headers.get("stripe-signature");
 
