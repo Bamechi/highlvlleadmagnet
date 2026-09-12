@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>High Lvl Lead Magnet — Preview</title>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--mint:#eef3fb;--blue:#0f56c4;--signal:#00c8ff;--ink:#0a1628}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,sans-serif;color:var(--ink);background:var(--mint);
+background-image:linear-gradient(rgba(15,86,196,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(15,86,196,.08) 1px,transparent 1px);background-size:28px 28px}
+.display{font-family:'Archivo Black',sans-serif}
+.glass{background:rgba(255,255,255,.72);backdrop-filter:blur(8px);border:1px solid rgba(15,86,196,.15)}
+.wrap{max-width:1024px;margin:0 auto;padding:0 24px}
+.narrow{max-width:672px;margin:0 auto;padding:0 24px}
+section{padding:0 0}
+.hero{padding:96px 0 64px}
+.eyebrow{font-size:14px;font-weight:600;color:var(--blue)}
+h1{font-size:clamp(40px,7vw,76px);line-height:.95;margin-top:16px}
+.sub{margin-top:24px;font-size:18px;color:rgba(10,22,40,.7);max-width:520px;line-height:1.6}
+.btn-ink{display:inline-block;margin-top:32px;background:var(--ink);color:var(--signal);padding:14px 26px;border-radius:8px;font-weight:600;text-decoration:none}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.chip{border:1px solid rgba(15,86,196,.25);background:rgba(255,255,255,.7);color:rgba(10,22,40,.75);border-radius:999px;padding:7px 14px;font-size:14px;font-family:inherit;cursor:pointer}
+.chip.on{background:var(--blue);color:#fff;border-color:var(--blue)}
+.toggle button{border:0;background:none;padding:9px 20px;border-radius:999px;font-weight:600;font-size:14px;color:rgba(10,22,40,.7);cursor:pointer;font-family:inherit}
+.toggle button.on{background:var(--blue);color:#fff}
+form{margin-top:24px;border-radius:16px;padding:32px}
+label{font-size:14px;font-weight:600;color:rgba(10,22,40,.8);display:block}
+input[type=text],input[type=email]{margin-top:8px;width:100%;border:1px solid rgba(15,86,196,.2);background:rgba(255,255,255,.8);border-radius:8px;padding:14px 16px;font-family:inherit;font-size:16px;color:var(--ink)}
+input::placeholder{color:rgba(10,22,40,.35)}
+.field{margin-bottom:20px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.checks{display:flex;gap:24px;margin-bottom:20px;font-size:14px;color:rgba(10,22,40,.8)}
+.checks label{display:flex;align-items:center;gap:8px;font-weight:400}
+.submit{width:100%;background:var(--ink);color:var(--signal);border:0;border-radius:8px;padding:16px;font-weight:600;font-size:16px;font-family:inherit;cursor:pointer}
+.note{text-align:center;font-size:12px;color:rgba(10,22,40,.45);margin-top:12px}
+.dark{background:var(--ink);color:var(--mint);padding:80px 0;margin-top:96px}
+.dark h2{font-size:clamp(28px,4vw,40px)}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-top:40px;list-style:none}
+.num{font-family:'Archivo Black',sans-serif;font-size:40px;color:var(--signal)}
+.steps h3{margin-top:12px;font-size:16px}
+.steps p{margin-top:8px;font-size:14px;color:rgba(238,243,251,.7);line-height:1.6}
+.pricing{padding:80px 0}
+.pricing h2{font-size:clamp(28px,4vw,40px)}
+.pricing>.wrap>p{margin-top:12px;color:rgba(10,22,40,.65);max-width:520px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:40px}
+.card{border-radius:16px;padding:24px;display:flex;flex-direction:column}
+.card.feat{box-shadow:0 0 0 2px var(--blue)}
+.price{font-family:'Archivo Black',sans-serif;font-size:30px;margin-top:8px}
+.price span{font-family:Inter;font-size:16px;font-weight:400;color:rgba(10,22,40,.5)}
+.card p{margin-top:12px;font-size:14px;color:rgba(10,22,40,.65);flex:1;line-height:1.55}
+.cta{margin-top:20px;border-radius:8px;padding:11px;text-align:center;font-size:14px;font-weight:600;text-decoration:none}
+.cta.out{border:1px solid var(--blue);color:var(--blue)}
+.cta.solid{background:var(--blue);color:#fff}
+.cta.ink{background:var(--ink);color:var(--signal)}
+footer{border-top:1px solid rgba(15,86,196,.15);padding:48px 0}
+.fr{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:24px}
+footer a{color:var(--blue);font-size:14px;text-decoration:none;display:block;margin-bottom:6px}
+@media(max-width:760px){.steps,.cards,.row{grid-template-columns:1fr}}
+</style></head><body>
+
+<section class="hero"><div class="wrap">
+<p class="eyebrow">High Lvl AI</p>
+<h1 class="display">Tell it what you<br>need. Get the list.</h1>
+<p class="sub">A research engine that searches the live web, compiles what it finds, and emails you a clean list. Tools, resources, or businesses in a niche — one search handles all of it.</p>
+<a class="btn-ink" href="#tool">Start a search</a>
+</div></section>
+
+<section id="tool" class="narrow" style="padding-bottom:96px">
+<form class="glass" onsubmit="return false">
+<div class="field"><label>What are you looking for?</label><input id="topic" type="text" placeholder="AI video editing tools — or plumbers in Austin, TX"></div>
+<div class="field"><label>Narrow it down</label>
+<div class="chips">
+<button type="button" class="chip" onclick="this.classList.toggle('on')">AI &amp; Automation</button>
+<button type="button" class="chip" onclick="this.classList.toggle('on')">Marketing</button>
+<button type="button" class="chip" onclick="this.classList.toggle('on')">Sales &amp; Leads</button>
+<button type="button" class="chip" onclick="this.classList.toggle('on')">Content &amp; Video</button>
+<button type="button" class="chip" onclick="this.classList.toggle('on')">Design &amp; Creative</button>
+<button type="button" class="chip" onclick="this.classList.toggle('on')">Analytics &amp; Data</button>
+<button type="button" class="chip" onclick="this.classList.toggle('on')">Finance &amp; Ops</button>
+<button type="button" class="chip" onclick="this.classList.toggle('on')">Local Business</button>
+<button type="button" class="chip" onclick="this.classList.toggle('on')">E-commerce</button>
+<button type="button" class="chip" onclick="this.classList.toggle('on')">Productivity</button>
+</div></div>
+<div class="field"><label>Location</label><input type="text" placeholder="Optional"></div>
+<div class="checks"><label><input type="checkbox" style="accent-color:var(--blue)"> Must be free</label>
+<label><input type="checkbox" style="accent-color:var(--blue)"> Highly rated</label></div>
+<div style="border-top:1px solid rgba(15,86,196,.15);padding-top:20px">
+<div class="field"><label>Email you purchased with</label><input type="email" placeholder="you@email.com">
+<p style="font-size:12px;color:rgba(10,22,40,.5);margin-top:6px">Your list is sent here, and it is how we find your plan.</p></div>
+<div class="field"><label>Promo code</label><input type="text" placeholder="Optional"></div></div>
+<button class="submit">Build my list</button>
+</form></section>
+
+<section class="dark"><div class="wrap">
+<h2 class="display">What happens when you hit the button</h2>
+<ol class="steps">
+<li><div class="num">01</div><h3>It searches live</h3><p>Your topic and filters go straight to a live web search. No stale database, no pre-baked list someone wrote last year.</p></li>
+<li><div class="num">02</div><h3>It compiles and cleans</h3><p>Results come back structured — names, one-line descriptions, working links. Business Leads mode pulls publicly listed contact info only.</p></li>
+<li><div class="num">03</div><h3>It lands in your inbox</h3><p>The full list emails to you. The first five preview on screen so you know it worked before you go looking.</p></li>
+</ol></div></section>
+
+<section class="pricing"><div class="wrap">
+<h2 class="display">Pick your plan</h2>
+<p>Purchase with the email you want your lists sent to. Then search with that same email.</p>
+<div class="cards">
+<div class="card glass"><strong>Single Search</strong><div class="price">$4.44</div>
+<p>One list, up to 50 results. No subscription.</p>
+<a class="cta out" href="https://buy.stripe.com/28E3cw5lLbq99Gee3A7bW02">Buy one list</a></div>
+<div class="card glass feat"><strong>5 Searches a Month</strong><div class="price">$11.11<span>/mo</span></div>
+<p>Five lists a month, up to 75 results each, and your saved topic re-runs monthly on its own.</p>
+<a class="cta solid" href="https://buy.stripe.com/6oU28s8xX8dX19I5x47bW01">Start monthly</a></div>
+<div class="card glass"><strong>Annual</strong><div class="price">$99.99<span>/yr</span></div>
+<p>Sixty lists across the year, up to 75 results each, at a lower rate per list.</p>
+<a class="cta ink" href="https://buy.stripe.com/fZufZi6pP2TD19IaRo7bW00">Go annual</a></div>
+</div></div></section>
+
+<footer><div class="wrap fr">
+<div><div class="display" style="font-size:18px">High Lvl Lead Magnet</div>
+<p style="margin-top:4px;font-size:14px;color:rgba(10,22,40,.55)">Built by High Lvl Media.</p></div>
+<div><a href="https://aigentsmith.app">AiGENT SMITH — AI tools directory</a>
+<a href="https://ziion.io/nations/cnfdnt">CNFDNT Community</a></div>
+</div></footer>
+
+<script>
+
+</script></body></html>
